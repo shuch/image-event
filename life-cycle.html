@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <!-- <script type="text/javascript" src="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/js/bootstrap.bundle.js"></script> -->
+  <!-- <script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.common.js"></script> -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <script type="text/javascript">
+    console.log(window.j);
+  </script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style type="text/css">
+    /*img { width: 200px; height: auto; }*/
+  </style>
+  <script type="text/javascript">
+    
+    function getImage() {
+      const img = document.getElementById('img');
+      console.log(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOMContentLoaded');
+      getImage();
+    })
+
+    window.onload = () => {
+      console.log('load');
+      getImage();
+    }
+
+    window.onbeforeunload = () => {
+      return "There are unsaved changes. Leave now?";
+    }
+    // window.onbeforeunload = function() {
+    //   return "There are unsaved changes. Leave now?";
+    // };
+  </script>
+</head>
+<body>
+  <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0">
+  
+  
+</body>
+</html>
